@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3402F00C1B0F291600CB6B8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402F00B1B0F291600CB6B8D /* Images.xcassets */; };
+		3402F01B1B0F291600CB6B8D /* ondineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3402F01A1B0F291600CB6B8D /* ondineTests.m */; };
+		34133EC81B0F9ADE007682D0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34133EC71B0F9ADE007682D0 /* UIView+Extension.m */; };
+		34133ED31B0FB178007682D0 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34133ED21B0FB178007682D0 /* SYSettingViewController.m */; };
+		343414B11B18B00300F74F61 /* SYDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 343414AE1B18B00300F74F61 /* SYDateTool.m */; };
+		343414B21B18B00300F74F61 /* SYTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 343414B01B18B00300F74F61 /* SYTimeTool.m */; };
+		34523DDD1B1A1F6300963F43 /* SYCountingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 34523DDC1B1A1F6300963F43 /* SYCountingTime.m */; };
+		34523DE01B1A1F8D00963F43 /* SYCountingTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 34523DDF1B1A1F8D00963F43 /* SYCountingTimeTool.m */; };
+		3453860D1B1480F000C41417 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 345386031B1480F000C41417 /* FMDatabase.m */; };
+		3453860E1B1480F000C41417 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 345386051B1480F000C41417 /* FMDatabaseAdditions.m */; };
+		3453860F1B1480F000C41417 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 345386071B1480F000C41417 /* FMDatabasePool.m */; };
+		345386101B1480F000C41417 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 345386091B1480F000C41417 /* FMDatabaseQueue.m */; };
+		345386111B1480F000C41417 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453860C1B1480F000C41417 /* FMResultSet.m */; };
+		345386131B14810D00C41417 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 345386121B14810D00C41417 /* libsqlite3.0.dylib */; };
+		345386191B14833400C41417 /* SYEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 345386181B14833400C41417 /* SYEvent.m */; };
+		3453861C1B14835500C41417 /* SYEventTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453861B1B14835500C41417 /* SYEventTool.m */; };
+		3457B6FC1B1EB84B005DB7E2 /* SYDropDownMenuBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3457B6FB1B1EB84B005DB7E2 /* SYDropDownMenuBackground.m */; };
+		3457B6FF1B1EB865005DB7E2 /* SYDropDownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3457B6FE1B1EB865005DB7E2 /* SYDropDownMenuController.m */; };
+		345E00131B0F7A9400959350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E00031B0F7A9400959350 /* AppDelegate.m */; };
+		345E00141B0F7A9400959350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E00041B0F7A9400959350 /* main.m */; };
+		345E001A1B0F7BC400959350 /* SYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E00191B0F7BC400959350 /* SYTabBarViewController.m */; };
+		345E00841B0F937F00959350 /* SYCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E00831B0F937F00959350 /* SYCounterViewController.m */; };
+		345E008D1B0F961200959350 /* SYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E008C1B0F961200959350 /* SYNavigationController.m */; };
+		345E00901B0F973300959350 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 345E008F1B0F973300959350 /* UIBarButtonItem+Extension.m */; };
+		34603E131B1D909E006562F3 /* SYPcRectGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 34603E121B1D909E006562F3 /* SYPcRectGraph.m */; };
+		34603E161B1D90B2006562F3 /* SYPcRectGraphTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 34603E151B1D90B2006562F3 /* SYPcRectGraphTool.m */; };
+		34796B101B158F8500D84205 /* SYAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34796B0F1B158F8500D84205 /* SYAddEventViewController.m */; };
+		34A2BE2C1B1C2E85000BD225 /* SYPercentageGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2BE2B1B1C2E85000BD225 /* SYPercentageGraphViewController.m */; };
+		34A2BE2F1B1C358D000BD225 /* SYDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2BE2E1B1C358D000BD225 /* SYDatePickerView.m */; };
+		34A2BE351B1C3615000BD225 /* SYDatePickerBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2BE341B1C3615000BD225 /* SYDatePickerBgView.m */; };
+		34A2BE381B1C5560000BD225 /* SYPcGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2BE371B1C5560000BD225 /* SYPcGraphView.m */; };
+		34B304411B14DA280027C249 /* SYEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B304401B14DA280027C249 /* SYEventTableViewController.m */; };
+		34E19B0B1B12EBDE002B0B47 /* SYBtmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E19B0A1B12EBDE002B0B47 /* SYBtmView.m */; };
+		34E19B111B133DB4002B0B47 /* SYBtmSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E19B101B133DB4002B0B47 /* SYBtmSubView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3402F0151B0F291600CB6B8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402EFF31B0F291500CB6B8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3402EFFA1B0F291500CB6B8D;
+			remoteInfo = ondine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3402EFFB1B0F291600CB6B8D /* ondine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ondine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3402EFFF1B0F291600CB6B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3402F00B1B0F291600CB6B8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3402F0141B0F291600CB6B8D /* ondineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ondineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3402F0191B0F291600CB6B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3402F01A1B0F291600CB6B8D /* ondineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ondineTests.m; sourceTree = "<group>"; };
+		34133EC61B0F9ADE007682D0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		34133EC71B0F9ADE007682D0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		34133ED11B0FB178007682D0 /* SYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSettingViewController.h; sourceTree = "<group>"; };
+		34133ED21B0FB178007682D0 /* SYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSettingViewController.m; sourceTree = "<group>"; };
+		343414AD1B18B00300F74F61 /* SYDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDateTool.h; sourceTree = "<group>"; };
+		343414AE1B18B00300F74F61 /* SYDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDateTool.m; sourceTree = "<group>"; };
+		343414AF1B18B00300F74F61 /* SYTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTimeTool.h; sourceTree = "<group>"; };
+		343414B01B18B00300F74F61 /* SYTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTimeTool.m; sourceTree = "<group>"; };
+		34523DDB1B1A1F6300963F43 /* SYCountingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCountingTime.h; sourceTree = "<group>"; };
+		34523DDC1B1A1F6300963F43 /* SYCountingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCountingTime.m; sourceTree = "<group>"; };
+		34523DDE1B1A1F8D00963F43 /* SYCountingTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCountingTimeTool.h; sourceTree = "<group>"; };
+		34523DDF1B1A1F8D00963F43 /* SYCountingTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCountingTimeTool.m; sourceTree = "<group>"; };
+		345386021B1480F000C41417 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		345386031B1480F000C41417 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		345386041B1480F000C41417 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		345386051B1480F000C41417 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		345386061B1480F000C41417 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		345386071B1480F000C41417 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		345386081B1480F000C41417 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		345386091B1480F000C41417 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		3453860A1B1480F000C41417 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		3453860B1B1480F000C41417 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		3453860C1B1480F000C41417 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		345386121B14810D00C41417 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		345386171B14833400C41417 /* SYEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYEvent.h; sourceTree = "<group>"; };
+		345386181B14833400C41417 /* SYEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYEvent.m; sourceTree = "<group>"; };
+		3453861A1B14835500C41417 /* SYEventTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYEventTool.h; sourceTree = "<group>"; };
+		3453861B1B14835500C41417 /* SYEventTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYEventTool.m; sourceTree = "<group>"; };
+		3457B6FA1B1EB84B005DB7E2 /* SYDropDownMenuBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDropDownMenuBackground.h; sourceTree = "<group>"; };
+		3457B6FB1B1EB84B005DB7E2 /* SYDropDownMenuBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDropDownMenuBackground.m; sourceTree = "<group>"; };
+		3457B6FD1B1EB865005DB7E2 /* SYDropDownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDropDownMenuController.h; sourceTree = "<group>"; };
+		3457B6FE1B1EB865005DB7E2 /* SYDropDownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDropDownMenuController.m; sourceTree = "<group>"; };
+		345E00021B0F7A9400959350 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		345E00031B0F7A9400959350 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		345E00041B0F7A9400959350 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		345E00181B0F7BC400959350 /* SYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTabBarViewController.h; sourceTree = "<group>"; };
+		345E00191B0F7BC400959350 /* SYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarViewController.m; sourceTree = "<group>"; };
+		345E00821B0F937F00959350 /* SYCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCounterViewController.h; sourceTree = "<group>"; };
+		345E00831B0F937F00959350 /* SYCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCounterViewController.m; sourceTree = "<group>"; };
+		345E008B1B0F961200959350 /* SYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationController.h; sourceTree = "<group>"; };
+		345E008C1B0F961200959350 /* SYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNavigationController.m; sourceTree = "<group>"; };
+		345E008E1B0F973300959350 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		345E008F1B0F973300959350 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		34603E111B1D909E006562F3 /* SYPcRectGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPcRectGraph.h; sourceTree = "<group>"; };
+		34603E121B1D909E006562F3 /* SYPcRectGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPcRectGraph.m; sourceTree = "<group>"; };
+		34603E141B1D90B2006562F3 /* SYPcRectGraphTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPcRectGraphTool.h; sourceTree = "<group>"; };
+		34603E151B1D90B2006562F3 /* SYPcRectGraphTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPcRectGraphTool.m; sourceTree = "<group>"; };
+		34796B0E1B158F8500D84205 /* SYAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAddEventViewController.h; sourceTree = "<group>"; };
+		34796B0F1B158F8500D84205 /* SYAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAddEventViewController.m; sourceTree = "<group>"; };
+		34A2BE2A1B1C2E85000BD225 /* SYPercentageGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPercentageGraphViewController.h; sourceTree = "<group>"; };
+		34A2BE2B1B1C2E85000BD225 /* SYPercentageGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPercentageGraphViewController.m; sourceTree = "<group>"; };
+		34A2BE2D1B1C358D000BD225 /* SYDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDatePickerView.h; sourceTree = "<group>"; };
+		34A2BE2E1B1C358D000BD225 /* SYDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDatePickerView.m; sourceTree = "<group>"; };
+		34A2BE331B1C3615000BD225 /* SYDatePickerBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDatePickerBgView.h; sourceTree = "<group>"; };
+		34A2BE341B1C3615000BD225 /* SYDatePickerBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDatePickerBgView.m; sourceTree = "<group>"; };
+		34A2BE361B1C5560000BD225 /* SYPcGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPcGraphView.h; sourceTree = "<group>"; };
+		34A2BE371B1C5560000BD225 /* SYPcGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPcGraphView.m; sourceTree = "<group>"; };
+		34B3043F1B14DA280027C249 /* SYEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYEventTableViewController.h; sourceTree = "<group>"; };
+		34B304401B14DA280027C249 /* SYEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYEventTableViewController.m; sourceTree = "<group>"; };
+		34E19B091B12EBDE002B0B47 /* SYBtmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBtmView.h; sourceTree = "<group>"; };
+		34E19B0A1B12EBDE002B0B47 /* SYBtmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBtmView.m; sourceTree = "<group>"; };
+		34E19B0F1B133DB4002B0B47 /* SYBtmSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBtmSubView.h; sourceTree = "<group>"; };
+		34E19B101B133DB4002B0B47 /* SYBtmSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBtmSubView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3402EFF81B0F291500CB6B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345386131B14810D00C41417 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402F0111B0F291600CB6B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3402EFF21B0F291500CB6B8D = {
+			isa = PBXGroup;
+			children = (
+				3402EFFD1B0F291600CB6B8D /* ondine */,
+				3402F0171B0F291600CB6B8D /* ondineTests */,
+				3402EFFC1B0F291600CB6B8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3402EFFC1B0F291600CB6B8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3402EFFB1B0F291600CB6B8D /* ondine.app */,
+				3402F0141B0F291600CB6B8D /* ondineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3402EFFD1B0F291600CB6B8D /* ondine */ = {
+			isa = PBXGroup;
+			children = (
+				345EFFFC1B0F7A9400959350 /* Main(主要) */,
+				345E000F1B0F7A9400959350 /* TimeCounter(计时器) */,
+				345E00061B0F7A9400959350 /* PercentageGraph(百分比图表) */,
+				34133ECD1B0FB04B007682D0 /* Setting(设置) */,
+				3402F00B1B0F291600CB6B8D /* Images.xcassets */,
+				3402EFFE1B0F291600CB6B8D /* Supporting Files */,
+			);
+			path = ondine;
+			sourceTree = "<group>";
+		};
+		3402EFFE1B0F291600CB6B8D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3402EFFF1B0F291600CB6B8D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3402F0171B0F291600CB6B8D /* ondineTests */ = {
+			isa = PBXGroup;
+			children = (
+				3402F01A1B0F291600CB6B8D /* ondineTests.m */,
+				3402F0181B0F291600CB6B8D /* Supporting Files */,
+			);
+			path = ondineTests;
+			sourceTree = "<group>";
+		};
+		3402F0181B0F291600CB6B8D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3402F0191B0F291600CB6B8D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34133ECD1B0FB04B007682D0 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				34133ED11B0FB178007682D0 /* SYSettingViewController.h */,
+				34133ED21B0FB178007682D0 /* SYSettingViewController.m */,
+				34B3043F1B14DA280027C249 /* SYEventTableViewController.h */,
+				34B304401B14DA280027C249 /* SYEventTableViewController.m */,
+				34796B0E1B158F8500D84205 /* SYAddEventViewController.h */,
+				34796B0F1B158F8500D84205 /* SYAddEventViewController.m */,
+			);
+			name = "Setting(设置)";
+			path = "Classes/Setting(设置)";
+			sourceTree = "<group>";
+		};
+		345386011B1480F000C41417 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				345386021B1480F000C41417 /* FMDatabase.h */,
+				345386031B1480F000C41417 /* FMDatabase.m */,
+				345386041B1480F000C41417 /* FMDatabaseAdditions.h */,
+				345386051B1480F000C41417 /* FMDatabaseAdditions.m */,
+				345386061B1480F000C41417 /* FMDatabasePool.h */,
+				345386071B1480F000C41417 /* FMDatabasePool.m */,
+				345386081B1480F000C41417 /* FMDatabaseQueue.h */,
+				345386091B1480F000C41417 /* FMDatabaseQueue.m */,
+				3453860A1B1480F000C41417 /* FMDB.h */,
+				3453860B1B1480F000C41417 /* FMResultSet.h */,
+				3453860C1B1480F000C41417 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		345E00001B0F7A9400959350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				343414AD1B18B00300F74F61 /* SYDateTool.h */,
+				343414AE1B18B00300F74F61 /* SYDateTool.m */,
+				343414AF1B18B00300F74F61 /* SYTimeTool.h */,
+				343414B01B18B00300F74F61 /* SYTimeTool.m */,
+				345386171B14833400C41417 /* SYEvent.h */,
+				345386181B14833400C41417 /* SYEvent.m */,
+				3453861A1B14835500C41417 /* SYEventTool.h */,
+				3453861B1B14835500C41417 /* SYEventTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		345E00011B0F7A9400959350 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				345E00021B0F7A9400959350 /* AppDelegate.h */,
+				345E00031B0F7A9400959350 /* AppDelegate.m */,
+				345E00041B0F7A9400959350 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		345E00051B0F7A9400959350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		345E00061B0F7A9400959350 /* PercentageGraph(百分比图表) */ = {
+			isa = PBXGroup;
+			children = (
+				345E00071B0F7A9400959350 /* Controller */,
+				345E00081B0F7A9400959350 /* Model */,
+				345E00091B0F7A9400959350 /* View */,
+			);
+			name = "PercentageGraph(百分比图表)";
+			path = "Classes/PercentageGraph(百分比图表)";
+			sourceTree = "<group>";
+		};
+		345E00071B0F7A9400959350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34A2BE2A1B1C2E85000BD225 /* SYPercentageGraphViewController.h */,
+				34A2BE2B1B1C2E85000BD225 /* SYPercentageGraphViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		345E00081B0F7A9400959350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34603E111B1D909E006562F3 /* SYPcRectGraph.h */,
+				34603E121B1D909E006562F3 /* SYPcRectGraph.m */,
+				34603E141B1D90B2006562F3 /* SYPcRectGraphTool.h */,
+				34603E151B1D90B2006562F3 /* SYPcRectGraphTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		345E00091B0F7A9400959350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34A2BE331B1C3615000BD225 /* SYDatePickerBgView.h */,
+				34A2BE341B1C3615000BD225 /* SYDatePickerBgView.m */,
+				34A2BE2D1B1C358D000BD225 /* SYDatePickerView.h */,
+				34A2BE2E1B1C358D000BD225 /* SYDatePickerView.m */,
+				34A2BE361B1C5560000BD225 /* SYPcGraphView.h */,
+				34A2BE371B1C5560000BD225 /* SYPcGraphView.m */,
+				3457B6FA1B1EB84B005DB7E2 /* SYDropDownMenuBackground.h */,
+				3457B6FB1B1EB84B005DB7E2 /* SYDropDownMenuBackground.m */,
+				3457B6FD1B1EB865005DB7E2 /* SYDropDownMenuController.h */,
+				3457B6FE1B1EB865005DB7E2 /* SYDropDownMenuController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		345E000F1B0F7A9400959350 /* TimeCounter(计时器) */ = {
+			isa = PBXGroup;
+			children = (
+				345E00101B0F7A9400959350 /* Controller */,
+				345E00111B0F7A9400959350 /* Model */,
+				345E00121B0F7A9400959350 /* View */,
+			);
+			name = "TimeCounter(计时器)";
+			path = "Classes/TimeCounter(计时器)";
+			sourceTree = "<group>";
+		};
+		345E00101B0F7A9400959350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				345E00821B0F937F00959350 /* SYCounterViewController.h */,
+				345E00831B0F937F00959350 /* SYCounterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		345E00111B0F7A9400959350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34523DDB1B1A1F6300963F43 /* SYCountingTime.h */,
+				34523DDC1B1A1F6300963F43 /* SYCountingTime.m */,
+				34523DDE1B1A1F8D00963F43 /* SYCountingTimeTool.h */,
+				34523DDF1B1A1F8D00963F43 /* SYCountingTimeTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		345E00121B0F7A9400959350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34E19B091B12EBDE002B0B47 /* SYBtmView.h */,
+				34E19B0A1B12EBDE002B0B47 /* SYBtmView.m */,
+				34E19B0F1B133DB4002B0B47 /* SYBtmSubView.h */,
+				34E19B101B133DB4002B0B47 /* SYBtmSubView.m */,
+				345386121B14810D00C41417 /* libsqlite3.0.dylib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		345EFFFC1B0F7A9400959350 /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				345EFFFD1B0F7A9400959350 /* Category */,
+				345EFFFE1B0F7A9400959350 /* Controller */,
+				345EFFFF1B0F7A9400959350 /* Lib */,
+				345E00001B0F7A9400959350 /* Model */,
+				345E00011B0F7A9400959350 /* Other */,
+				345E00051B0F7A9400959350 /* View */,
+			);
+			name = "Main(主要)";
+			path = "Classes/Main(主要)";
+			sourceTree = "<group>";
+		};
+		345EFFFD1B0F7A9400959350 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				345E008E1B0F973300959350 /* UIBarButtonItem+Extension.h */,
+				345E008F1B0F973300959350 /* UIBarButtonItem+Extension.m */,
+				34133EC61B0F9ADE007682D0 /* UIView+Extension.h */,
+				34133EC71B0F9ADE007682D0 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		345EFFFE1B0F7A9400959350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				345E00181B0F7BC400959350 /* SYTabBarViewController.h */,
+				345E00191B0F7BC400959350 /* SYTabBarViewController.m */,
+				345E008B1B0F961200959350 /* SYNavigationController.h */,
+				345E008C1B0F961200959350 /* SYNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		345EFFFF1B0F7A9400959350 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				345386011B1480F000C41417 /* fmdb */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3402EFFA1B0F291500CB6B8D /* ondine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402F01E1B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondine" */;
+			buildPhases = (
+				3402EFF71B0F291500CB6B8D /* Sources */,
+				3402EFF81B0F291500CB6B8D /* Frameworks */,
+				3402EFF91B0F291500CB6B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ondine;
+			productName = ondine;
+			productReference = 3402EFFB1B0F291600CB6B8D /* ondine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3402F0131B0F291600CB6B8D /* ondineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402F0211B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondineTests" */;
+			buildPhases = (
+				3402F0101B0F291600CB6B8D /* Sources */,
+				3402F0111B0F291600CB6B8D /* Frameworks */,
+				3402F0121B0F291600CB6B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3402F0161B0F291600CB6B8D /* PBXTargetDependency */,
+			);
+			name = ondineTests;
+			productName = ondineTests;
+			productReference = 3402F0141B0F291600CB6B8D /* ondineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3402EFF31B0F291500CB6B8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "杨淳引";
+				TargetAttributes = {
+					3402EFFA1B0F291500CB6B8D = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = NTNCV84L5J;
+					};
+					3402F0131B0F291600CB6B8D = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = NTNCV84L5J;
+						TestTargetID = 3402EFFA1B0F291500CB6B8D;
+					};
+				};
+			};
+			buildConfigurationList = 3402EFF61B0F291500CB6B8D /* Build configuration list for PBXProject "ondine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3402EFF21B0F291500CB6B8D;
+			productRefGroup = 3402EFFC1B0F291600CB6B8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3402EFFA1B0F291500CB6B8D /* ondine */,
+				3402F0131B0F291600CB6B8D /* ondineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3402EFF91B0F291500CB6B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3402F00C1B0F291600CB6B8D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402F0121B0F291600CB6B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3402EFF71B0F291500CB6B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34E19B111B133DB4002B0B47 /* SYBtmSubView.m in Sources */,
+				34133EC81B0F9ADE007682D0 /* UIView+Extension.m in Sources */,
+				3457B6FF1B1EB865005DB7E2 /* SYDropDownMenuController.m in Sources */,
+				3453860D1B1480F000C41417 /* FMDatabase.m in Sources */,
+				343414B11B18B00300F74F61 /* SYDateTool.m in Sources */,
+				34133ED31B0FB178007682D0 /* SYSettingViewController.m in Sources */,
+				34523DDD1B1A1F6300963F43 /* SYCountingTime.m in Sources */,
+				34A2BE2F1B1C358D000BD225 /* SYDatePickerView.m in Sources */,
+				34A2BE2C1B1C2E85000BD225 /* SYPercentageGraphViewController.m in Sources */,
+				34B304411B14DA280027C249 /* SYEventTableViewController.m in Sources */,
+				3457B6FC1B1EB84B005DB7E2 /* SYDropDownMenuBackground.m in Sources */,
+				345E001A1B0F7BC400959350 /* SYTabBarViewController.m in Sources */,
+				3453860E1B1480F000C41417 /* FMDatabaseAdditions.m in Sources */,
+				34A2BE351B1C3615000BD225 /* SYDatePickerBgView.m in Sources */,
+				34603E131B1D909E006562F3 /* SYPcRectGraph.m in Sources */,
+				345E00141B0F7A9400959350 /* main.m in Sources */,
+				3453860F1B1480F000C41417 /* FMDatabasePool.m in Sources */,
+				34603E161B1D90B2006562F3 /* SYPcRectGraphTool.m in Sources */,
+				3453861C1B14835500C41417 /* SYEventTool.m in Sources */,
+				345E008D1B0F961200959350 /* SYNavigationController.m in Sources */,
+				345386101B1480F000C41417 /* FMDatabaseQueue.m in Sources */,
+				34E19B0B1B12EBDE002B0B47 /* SYBtmView.m in Sources */,
+				343414B21B18B00300F74F61 /* SYTimeTool.m in Sources */,
+				345E00131B0F7A9400959350 /* AppDelegate.m in Sources */,
+				345386191B14833400C41417 /* SYEvent.m in Sources */,
+				345E00901B0F973300959350 /* UIBarButtonItem+Extension.m in Sources */,
+				345386111B1480F000C41417 /* FMResultSet.m in Sources */,
+				34523DE01B1A1F8D00963F43 /* SYCountingTimeTool.m in Sources */,
+				345E00841B0F937F00959350 /* SYCounterViewController.m in Sources */,
+				34A2BE381B1C5560000BD225 /* SYPcGraphView.m in Sources */,
+				34796B101B158F8500D84205 /* SYAddEventViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402F0101B0F291600CB6B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3402F01B1B0F291600CB6B8D /* ondineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3402F0161B0F291600CB6B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3402EFFA1B0F291500CB6B8D /* ondine */;
+			targetProxy = 3402F0151B0F291600CB6B8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3402F01C1B0F291600CB6B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chunyin Yang (SJ9364QW43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chunyin Yang (SJ9364QW43)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9b9f0741-1fc1-49d3-8290-5e0dfcfbfa51";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3402F01D1B0F291600CB6B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chunyin Yang (SJ9364QW43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chunyin Yang (SJ9364QW43)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9b9f0741-1fc1-49d3-8290-5e0dfcfbfa51";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3402F01F1B0F291600CB6B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ondine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3402F0201B0F291600CB6B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ondine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3402F0221B0F291600CB6B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ondineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ondine.app/ondine";
+			};
+			name = Debug;
+		};
+		3402F0231B0F291600CB6B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ondineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ondine.app/ondine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3402EFF61B0F291500CB6B8D /* Build configuration list for PBXProject "ondine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402F01C1B0F291600CB6B8D /* Debug */,
+				3402F01D1B0F291600CB6B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3402F01E1B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402F01F1B0F291600CB6B8D /* Debug */,
+				3402F0201B0F291600CB6B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3402F0211B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402F0221B0F291600CB6B8D /* Debug */,
+				3402F0231B0F291600CB6B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3402EFF31B0F291500CB6B8D /* Project object */;
+}

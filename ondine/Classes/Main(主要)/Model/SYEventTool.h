@@ -10,17 +10,15 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-#import "SYEvent.h"
 
 @interface SYEventTool : NSObject
 //事件操作方法
-+(NSArray *)events;
-+(void)addEvent:(SYEvent *)event;
++ (NSArray *)events;
++ (void)addEvent:(SYEvent *)event;
 
 //事件查询方法
-+(BOOL)isExist:(SYEvent *)event;
-+(NSInteger)getEventIdByEventName:(NSString *)eventName;
-+(NSString *)getEventNameByStrEventId:(NSString *)eventId;
-+(NSString *)getEventColorByStrEventId:(NSString *)eventId;
++ (BOOL)isExist:(SYEvent *)event;
++ (NSInteger)getEventIdByEventName:(NSString *)eventName;
++ (NSString *)getEventNameByStrEventId:(NSString *)eventId;
++ (NSString *)getEventColorByStrEventId:(NSString *)eventId;
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIBarButtonItem+Extension.h"
 
 @interface SYNavigationController : UINavigationController
 

@@ -10,8 +10,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "FMDB.h"
-#import "SYDateTool.h"
 
 @interface SYTimeTool : NSObject
 //和当前正在进行的事件有关的方法

@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SYCounterViewController.h"
-#import "SYPercentageGraphViewController.h"
-#import "SYNavigationController.h"
 
 @interface SYTabBarViewController : UITabBarController
 

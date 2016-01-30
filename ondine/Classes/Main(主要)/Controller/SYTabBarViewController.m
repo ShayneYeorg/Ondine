@@ -7,6 +7,9 @@
 //
 
 #import "SYTabBarViewController.h"
+#import "SYCounterViewController.h"
+#import "SYPercentageGraphViewController.h"
+#import "SYNavigationController.h"
 
 // RGB颜色
 #define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

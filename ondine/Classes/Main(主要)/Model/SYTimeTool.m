@@ -12,6 +12,8 @@
  */
 
 #import "SYTimeTool.h"
+#import "FMDB.h"
+#import "SYDateTool.h"
 
 @implementation SYTimeTool
 //数据库对象
@@ -35,7 +37,7 @@ static FMDatabase *_db;
     }
 }
 
-+(NSString *)getCurrentEventName{
++ (NSString *)getCurrentEventName{
     NSString *currentEventName = [[NSString alloc]init];
     NSInteger currentTimeId = [self getCurrentTimeId];
     NSInteger currentEventId = -1;
@@ -53,14 +55,14 @@ static FMDatabase *_db;
 /**
  *   update t_currentEvent里面的当前事件ID
  */
-+(void)updateCurrentTimeId:(NSInteger)timeId{
++ (void)updateCurrentTimeId:(NSInteger)timeId{
     [_db executeUpdateWithFormat:@"UPDATE t_currentEvent SET currentEventId = %ld WHERE urrentEvent = 'urrentEvent';", (long)timeId];
 }
 
 /**
  *   取得t_currentEvent表里的当前事件ID，即是取得系统当前正在执行的事件
  */
-+(NSInteger)getCurrentTimeId{
++ (NSInteger)getCurrentTimeId{
     NSInteger currentTimeId = -1;
     FMResultSet *set = [_db executeQuery:@"SELECT currentEventId FROM t_currentEvent WHERE urrentEvent = 'urrentEvent';"];
     while (set.next) {
@@ -72,7 +74,7 @@ static FMDatabase *_db;
 /**
  *   事件开始时调用，插入执行的事件和开始执行的时间并返回事件在t_time表中的流水编号
  */
-+(NSInteger)insertStartTime:(NSDate *)startTime withEvent:(NSInteger)eventId{
++ (NSInteger)insertStartTime:(NSDate *)startTime withEvent:(NSInteger)eventId{
     NSString *timeStamp = [SYDateTool transDateToTimeStamp:startTime];
     [_db executeUpdateWithFormat:@"INSERT INTO t_time(eventId, startTime) VALUES (%ld, %@);", (long)eventId, timeStamp];
     NSInteger topId = -1;
@@ -84,7 +86,7 @@ static FMDatabase *_db;
 }
 
 
-+(NSDate *)getTopStartTime{
++ (NSDate *)getTopStartTime{
     NSDate *topStartTime = [[NSDate alloc]init];
     FMResultSet *set = [_db executeQuery:@"SELECT startTime FROM t_time ORDER BY timeId DESC LIMIT 0,1;"];
     while (set.next) {
@@ -94,7 +96,7 @@ static FMDatabase *_db;
     return topStartTime;
 }
 
-+(NSString *)getTopStartTimeString{
++ (NSString *)getTopStartTimeString{
     NSString *topStartTimeSring = [[NSString alloc]init];
     FMResultSet *set = [_db executeQuery:@"SELECT startTime FROM t_time ORDER BY timeId DESC LIMIT 0,1;"];
     while (set.next) {
@@ -104,7 +106,7 @@ static FMDatabase *_db;
     return topStartTimeSring;
 }
 
-+(NSInteger)getTopStartTimeStamp{
++ (NSInteger)getTopStartTimeStamp{
     NSInteger topStartTimeStamp = 0;
     FMResultSet *set = [_db executeQuery:@"SELECT startTime FROM t_time ORDER BY timeId DESC LIMIT 0,1;"];
     while (set.next) {
@@ -115,7 +117,7 @@ static FMDatabase *_db;
 }
 
 //这个才是最有用的
-+(NSInteger)getStartTimeStampByTimeId:(NSInteger)timeId{
++ (NSInteger)getStartTimeStampByTimeId:(NSInteger)timeId{
     NSInteger startTimeStamp = 0;
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT startTime FROM t_time WHERE timeId = %ld;", (long)timeId];
     while (set.next) {
@@ -128,7 +130,7 @@ static FMDatabase *_db;
 /**
  *   事件结束时调用，插入执行的事件和结束执行的时间
  */
-+(void)updateEndTime:(NSDate *)endTime withTimeId:(NSInteger)timeId{
++ (void)updateEndTime:(NSDate *)endTime withTimeId:(NSInteger)timeId{
     NSString *endTimeString = [[NSString alloc]init];
     endTimeString = [SYDateTool transDateToTimeStamp:endTime];
     [_db executeUpdateWithFormat:@"UPDATE t_time SET endTime = %@ WHERE timeId = %ld;", endTimeString, (long)timeId];
@@ -144,7 +146,7 @@ static FMDatabase *_db;
     return topEndTime;
 }
 
-+(NSString *)getTopEndTimeString{
++ (NSString *)getTopEndTimeString{
     NSString *topEndTime = [[NSString alloc]init];
     FMResultSet *set = [_db executeQuery:@"SELECT endTime FROM t_time ORDER BY timeId DESC LIMIT 0,1;"];
     while (set.next) {
@@ -154,7 +156,7 @@ static FMDatabase *_db;
     return topEndTime;
 }
 
-+(NSInteger)getTopEndTimeStamp{
++ (NSInteger)getTopEndTimeStamp{
     NSInteger topEndTimeStamp = 0;
     FMResultSet *set = [_db executeQuery:@"SELECT endTime FROM t_time ORDER BY timeId DESC LIMIT 0,1;"];
     while (set.next) {
@@ -165,7 +167,7 @@ static FMDatabase *_db;
 }
 
 //这个才是有用的
-+(NSInteger)getEndTimeStampByTimeId:(NSInteger)timeId{
++ (NSInteger)getEndTimeStampByTimeId:(NSInteger)timeId{
     NSInteger endTimeStamp = 0;
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT endTime FROM t_time WHERE timeId = %ld;", (long)timeId];
     while (set.next) {
@@ -175,7 +177,7 @@ static FMDatabase *_db;
     return endTimeStamp;
 }
 
-+(NSInteger)getTopId{
++ (NSInteger)getTopId{
     NSInteger topId = -1;
     FMResultSet *set = [_db executeQuery:@"SELECT top timeId FROM t_time;"];
     while (set.next) {
@@ -185,7 +187,7 @@ static FMDatabase *_db;
 }
 
 //插入事件经历时长
-+(void)insertDuration:(NSInteger)duration withTimeId:(NSInteger)timeId{
++ (void)insertDuration:(NSInteger)duration withTimeId:(NSInteger)timeId{
     [_db executeUpdateWithFormat:@"UPDATE t_time SET duration = %ld WHERE timeId = %ld;", (long)duration, (long)timeId];
 }
 @end

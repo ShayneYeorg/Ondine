@@ -7,6 +7,7 @@
 //
 
 #import "SYNavigationController.h"
+#import "UIBarButtonItem+Extension.h"
 
 // RGB颜色
 #define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
@@ -20,7 +21,7 @@
 /**
  *   把viewDidLoad里的加载语句整合在这个方法里
  */
--(void)detailsOfViewDidLoad{
+- (void)detailsOfViewDidLoad{
     //指定导航控制器的背景色为程序统一色
     self.navigationBar.barTintColor = SYColor(0, 150, 30);
     
@@ -49,7 +50,7 @@
 /**
  *   设置状态栏颜色为白色
  */
--(UIStatusBarStyle)preferredStatusBarStyle{
+- (UIStatusBarStyle)preferredStatusBarStyle{
     //亮色
     return UIStatusBarStyleLightContent;
 }

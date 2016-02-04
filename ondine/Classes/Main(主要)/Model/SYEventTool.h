@@ -9,6 +9,8 @@
  *   对事件模型进行操作和查询的工具类
  */
 
+@class SYEvent;
+
 #import <UIKit/UIKit.h>
 
 @interface SYEventTool : NSObject

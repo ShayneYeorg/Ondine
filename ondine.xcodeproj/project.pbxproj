@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3402F00C1B0F291600CB6B8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402F00B1B0F291600CB6B8D /* Images.xcassets */; };
-		3402F01B1B0F291600CB6B8D /* ondineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3402F01A1B0F291600CB6B8D /* ondineTests.m */; };
 		34133EC81B0F9ADE007682D0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34133EC71B0F9ADE007682D0 /* UIView+Extension.m */; };
 		34133ED31B0FB178007682D0 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34133ED21B0FB178007682D0 /* SYSettingViewController.m */; };
 		343414B11B18B00300F74F61 /* SYDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 343414AE1B18B00300F74F61 /* SYDateTool.m */; };
@@ -43,23 +42,10 @@
 		34E19B111B133DB4002B0B47 /* SYBtmSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E19B101B133DB4002B0B47 /* SYBtmSubView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3402F0151B0F291600CB6B8D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3402EFF31B0F291500CB6B8D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3402EFFA1B0F291500CB6B8D;
-			remoteInfo = ondine;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		3402EFFB1B0F291600CB6B8D /* ondine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ondine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402EFFF1B0F291600CB6B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3402F00B1B0F291600CB6B8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3402F0141B0F291600CB6B8D /* ondineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ondineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3402F0191B0F291600CB6B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3402F01A1B0F291600CB6B8D /* ondineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ondineTests.m; sourceTree = "<group>"; };
 		34133EC61B0F9ADE007682D0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		34133EC71B0F9ADE007682D0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		34133ED11B0FB178007682D0 /* SYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSettingViewController.h; sourceTree = "<group>"; };
@@ -107,6 +93,8 @@
 		34603E121B1D909E006562F3 /* SYPcRectGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPcRectGraph.m; sourceTree = "<group>"; };
 		34603E141B1D90B2006562F3 /* SYPcRectGraphTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPcRectGraphTool.h; sourceTree = "<group>"; };
 		34603E151B1D90B2006562F3 /* SYPcRectGraphTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPcRectGraphTool.m; sourceTree = "<group>"; };
+		34716C5C1CA964D90078B7F2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		34716C5D1CA965730078B7F2 /* ODNConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODNConstant.h; sourceTree = "<group>"; };
 		34796B0E1B158F8500D84205 /* SYAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAddEventViewController.h; sourceTree = "<group>"; };
 		34796B0F1B158F8500D84205 /* SYAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAddEventViewController.m; sourceTree = "<group>"; };
 		34A2BE2A1B1C2E85000BD225 /* SYPercentageGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPercentageGraphViewController.h; sourceTree = "<group>"; };
@@ -134,13 +122,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3402F0111B0F291600CB6B8D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				3402EFFD1B0F291600CB6B8D /* ondine */,
-				3402F0171B0F291600CB6B8D /* ondineTests */,
 				3402EFFC1B0F291600CB6B8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				3402EFFB1B0F291600CB6B8D /* ondine.app */,
-				3402F0141B0F291600CB6B8D /* ondineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,23 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3402EFFF1B0F291600CB6B8D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3402F0171B0F291600CB6B8D /* ondineTests */ = {
-			isa = PBXGroup;
-			children = (
-				3402F01A1B0F291600CB6B8D /* ondineTests.m */,
-				3402F0181B0F291600CB6B8D /* Supporting Files */,
-			);
-			path = ondineTests;
-			sourceTree = "<group>";
-		};
-		3402F0181B0F291600CB6B8D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3402F0191B0F291600CB6B8D /* Info.plist */,
+				34716C5C1CA964D90078B7F2 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,6 +216,7 @@
 				345E00021B0F7A9400959350 /* AppDelegate.h */,
 				345E00031B0F7A9400959350 /* AppDelegate.m */,
 				345E00041B0F7A9400959350 /* main.m */,
+				34716C5D1CA965730078B7F2 /* ODNConstant.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -419,24 +383,6 @@
 			productReference = 3402EFFB1B0F291600CB6B8D /* ondine.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3402F0131B0F291600CB6B8D /* ondineTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3402F0211B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondineTests" */;
-			buildPhases = (
-				3402F0101B0F291600CB6B8D /* Sources */,
-				3402F0111B0F291600CB6B8D /* Frameworks */,
-				3402F0121B0F291600CB6B8D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3402F0161B0F291600CB6B8D /* PBXTargetDependency */,
-			);
-			name = ondineTests;
-			productName = ondineTests;
-			productReference = 3402F0141B0F291600CB6B8D /* ondineTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -449,11 +395,6 @@
 					3402EFFA1B0F291500CB6B8D = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = NTNCV84L5J;
-					};
-					3402F0131B0F291600CB6B8D = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = NTNCV84L5J;
-						TestTargetID = 3402EFFA1B0F291500CB6B8D;
 					};
 				};
 			};
@@ -471,7 +412,6 @@
 			projectRoot = "";
 			targets = (
 				3402EFFA1B0F291500CB6B8D /* ondine */,
-				3402F0131B0F291600CB6B8D /* ondineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -482,13 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3402F00C1B0F291600CB6B8D /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3402F0121B0F291600CB6B8D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,23 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3402F0101B0F291600CB6B8D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3402F01B1B0F291600CB6B8D /* ondineTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3402F0161B0F291600CB6B8D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3402EFFA1B0F291500CB6B8D /* ondine */;
-			targetProxy = 3402F0151B0F291600CB6B8D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3402F01C1B0F291600CB6B8D /* Debug */ = {
@@ -645,6 +562,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ondine/PrefixHeader.pch";
 				INFOPLIST_FILE = ondine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,52 +579,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ondine/PrefixHeader.pch";
 				INFOPLIST_FILE = ondine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		3402F0221B0F291600CB6B8D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ondineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ondine.app/ondine";
-			};
-			name = Debug;
-		};
-		3402F0231B0F291600CB6B8D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ondineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ondine.app/ondine";
 			};
 			name = Release;
 		};
@@ -727,15 +606,6 @@
 			buildConfigurations = (
 				3402F01F1B0F291600CB6B8D /* Debug */,
 				3402F0201B0F291600CB6B8D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3402F0211B0F291600CB6B8D /* Build configuration list for PBXNativeTarget "ondineTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3402F0221B0F291600CB6B8D /* Debug */,
-				3402F0231B0F291600CB6B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

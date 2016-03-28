@@ -10,7 +10,6 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
 #import "SYEvent.h"
 #import "SYEventTool.h"
 #import "SYTimeTool.h"

@@ -9,9 +9,6 @@
 #import "SYNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-
 @implementation SYNavigationController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +20,7 @@
  */
 - (void)detailsOfViewDidLoad{
     //指定导航控制器的背景色为程序统一色
-    self.navigationBar.barTintColor = SYColor(0, 150, 30);
+    self.navigationBar.barTintColor = RGB(0, 150, 30);
     
     // 设置navigationBar标题的颜色
     NSMutableDictionary *navTitleAttrs = [NSMutableDictionary dictionary];

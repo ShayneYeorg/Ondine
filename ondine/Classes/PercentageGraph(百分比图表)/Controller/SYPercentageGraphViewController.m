@@ -8,8 +8,6 @@
 
 #import "SYPercentageGraphViewController.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenheight [UIScreen mainScreen].bounds.size.height
 #define kBtnHeight 40
@@ -61,7 +59,7 @@
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, kStartBtnY, kScreenWidth, kBtnHeight)];
         btn.backgroundColor = [UIColor whiteColor];
         [btn setTitle:@"请选择开始日期" forState:UIControlStateNormal];
-        [btn setTitleColor:SYColor(0, 150, 30) forState:UIControlStateNormal];
+        [btn setTitleColor:RGB(0, 150, 30) forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(clickPickBtn:) forControlEvents:UIControlEventTouchUpInside];
         _startBtn = btn;
         _startBtn.tag = 1;//用tag不是特别好，以后要优化此处
@@ -74,7 +72,7 @@
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, kEndBtnY, kScreenWidth, kBtnHeight)];
         btn.backgroundColor = [UIColor whiteColor];
         [btn setTitle:@"请选择结束日期" forState:UIControlStateNormal];
-        [btn setTitleColor:SYColor(0, 150, 30) forState:UIControlStateNormal];
+        [btn setTitleColor:RGB(0, 150, 30) forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(clickPickBtn:) forControlEvents:UIControlEventTouchUpInside];
         _endBtn = btn;
     }
@@ -91,7 +89,7 @@
  *   把viewDidLoad里的加载语句整合在这个方法里
  */
 -(void)detailsOfViewDidLoad{
-    self.view.backgroundColor = SYColor(240, 239, 245);
+    self.view.backgroundColor = RGB(240, 239, 245);
     
     [self.view addSubview:self.startBtn];
     [self.view addSubview:self.endBtn];

@@ -8,8 +8,6 @@
 
 #import "SYBtmSubView.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kSubTableX 0
 #define kSubTableY 2
 #define kSubTableWidth [[UIScreen mainScreen]bounds].size.width
@@ -120,7 +118,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.backgroundColor = [UIColor whiteColor];
         cell.selectedBackgroundView = [[UIView alloc]init];
-        cell.selectedBackgroundView.backgroundColor = SYColor(240, 239, 245);
+        cell.selectedBackgroundView.backgroundColor = RGB(240, 239, 245);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     

@@ -8,8 +8,6 @@
 
 #import "SYPcGraphView.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kGraphBtnX 50
 #define kGraphBtnHeight 40
@@ -112,7 +110,7 @@
         NSInteger kGraphBtnY = 50 * n + 10;
         NSInteger kGraphBtnWidth = (kScreenWidth - (kGraphBtnX * 2)) * graph.duration / self.allDuration;
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(kGraphBtnX, kGraphBtnY, kGraphBtnWidth, kGraphBtnHeight)];
-        btn.backgroundColor = SYColor(graph.graphColorR, graph.graphColorG, graph.graphColorB);
+        btn.backgroundColor = RGB(graph.graphColorR, graph.graphColorG, graph.graphColorB);
             //由于休息事件是白色的，和bgColor相同，所以要加上黑框来区别对待
         if([graph.graphName isEqualToString:@"休息"]){
             [btn.layer setBorderWidth:1.0];
@@ -122,7 +120,7 @@
         }
             //设置图形按钮的title，然后让它颜色和按钮背景色相同，有了title就可以把duration传给监听方法
         [btn setTitle:[NSString stringWithFormat:@"%ld", (long)graph.duration] forState:UIControlStateNormal];
-        [btn setTitleColor:SYColor(graph.graphColorR, graph.graphColorG, graph.graphColorB) forState:UIControlStateNormal];
+        [btn setTitleColor:RGB(graph.graphColorR, graph.graphColorG, graph.graphColorB) forState:UIControlStateNormal];
             //添加点击图表形按钮弹出下拉框的监听方法
         [btn addTarget:self action:@selector(showDropDownManu:) forControlEvents:UIControlEventTouchUpInside];
         

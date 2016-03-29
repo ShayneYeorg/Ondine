@@ -8,13 +8,10 @@
 
 #import "SYDropDownMenuController.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-
 @implementation SYDropDownMenuController
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.view.backgroundColor = SYColor(0, 150, 30);
+    self.view.backgroundColor = RGB(0, 150, 30);
 }
 
 /**

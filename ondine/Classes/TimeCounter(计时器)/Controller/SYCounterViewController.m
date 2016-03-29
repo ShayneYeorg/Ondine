@@ -18,8 +18,6 @@
 #import "SYCountingTime.h"
 #import "SYCountingTimeTool.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kLabelWidth [UIScreen mainScreen].bounds.size.width
 #define kLabelHeight 30
 #define kInfoLabelY self.view.frame.size.height * 0.2
@@ -133,7 +131,7 @@
     NSString *infoLableText = [NSString stringWithFormat:@"%@已进行了", currentEvent];
     self.infoLabel.text = infoLableText;
     self.infoLabel.textAlignment = NSTextAlignmentCenter;
-    self.infoLabel.textColor = SYColor(0, 150, 30);
+    self.infoLabel.textColor = RGB(0, 150, 30);
     [self.view addSubview:self.infoLabel];
     
     //时间label

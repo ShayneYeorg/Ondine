@@ -11,9 +11,6 @@
 #import "SYPercentageGraphViewController.h"
 #import "SYNavigationController.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-
 @implementation SYTabBarViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,9 +54,9 @@
     
     //设置tabBar文字的样式
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = SYColor(150, 150, 150);
+    textAttrs[NSForegroundColorAttributeName] = RGB(150, 150, 150);
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = SYColor(0, 150, 30);
+    selectTextAttrs[NSForegroundColorAttributeName] = RGB(0, 150, 30);
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     

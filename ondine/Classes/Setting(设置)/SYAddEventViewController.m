@@ -8,8 +8,6 @@
 
 #import "SYAddEventViewController.h"
 
-// RGB颜色
-#define SYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kUIWidth ([UIScreen mainScreen].bounds.size.width - 20)
 #define kNameFieldY CGRectGetMaxY(self.nameLable.frame)
 #define kColorLabelY CGRectGetMaxY(self.nameField.frame)
@@ -81,7 +79,7 @@
     if(_nameLable == nil){
         UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(10, 64, kUIWidth, 40)];
         lable.text = @"请输入事件名称";
-        lable.textColor = SYColor(0, 150, 30);
+        lable.textColor = RGB(0, 150, 30);
         lable.textAlignment = NSTextAlignmentCenter;
         _nameLable = lable;
         [self.view addSubview:_nameLable];
@@ -107,7 +105,7 @@
     if(_colorLable == nil){
         UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(10, kColorLabelY, kUIWidth, 40)];
         lable.text = @"请选择事件代表色";
-        lable.textColor = SYColor(0, 150, 30);
+        lable.textColor = RGB(0, 150, 30);
         lable.textAlignment = NSTextAlignmentCenter;
         _colorLable = lable;
         [self.view addSubview:_colorLable];

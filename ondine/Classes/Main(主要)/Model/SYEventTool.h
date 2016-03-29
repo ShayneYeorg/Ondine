@@ -14,6 +14,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SYEventTool : NSObject
+
 //事件操作方法
 + (NSArray *)events;
 + (void)addEvent:(SYEvent *)event;
@@ -23,4 +24,5 @@
 + (NSInteger)getEventIdByEventName:(NSString *)eventName;
 + (NSString *)getEventNameByStrEventId:(NSString *)eventId;
 + (NSString *)getEventColorByStrEventId:(NSString *)eventId;
+
 @end

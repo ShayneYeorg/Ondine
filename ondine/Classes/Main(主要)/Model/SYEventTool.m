@@ -16,11 +16,11 @@
 #import "SYEvent.h"
 
 @implementation SYEventTool
+
 //数据库对象
 static FMDatabase *_db;
 
-+ (void)initialize
-{
++ (void)initialize {
     // 1.打开数据库
     NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"ondine.sqlite"];
     _db = [FMDatabase databaseWithPath:path];
@@ -36,14 +36,12 @@ static FMDatabase *_db;
     }
 }
 
-+ (void)addEvent:(SYEvent *)event{
++ (void)addEvent:(SYEvent *)event {
     [_db executeUpdateWithFormat:@"INSERT INTO t_event(eventName, eventColor) VALUES (%@, %@);", event.eventName, event.eventColor];
 }
 
-/**
- *   这个方法返回了一个数组，包含了t_event表里出了休息之外所有的事件
- */
-+ (NSArray *)events{
+//这个方法返回了一个数组，包含了t_event表里出了休息之外所有的事件
++ (NSArray *)events {
     NSMutableArray *events = [NSMutableArray array];
     FMResultSet *set = [_db executeQuery:@"SELECT * FROM t_event;"];
     while (set.next) {
@@ -57,15 +55,15 @@ static FMDatabase *_db;
     return events;
 }
 
-+ (BOOL)isExist:(SYEvent *)event{
++ (BOOL)isExist:(SYEvent *)event {
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT * from t_event WHERE eventName = %@;", event.eventName];
-    if(set.next){
+    if(set.next) {
         return YES;
     }
     return NO;
 }
 
-+ (NSInteger)getEventIdByEventName:(NSString *)eventName{
++ (NSInteger)getEventIdByEventName:(NSString *)eventName {
     NSInteger eventId = -1;
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT eventId from t_event WHERE eventName = %@;", eventName];
     while (set.next) {
@@ -74,7 +72,7 @@ static FMDatabase *_db;
     return eventId;
 }
 
-+ (NSString *)getEventNameByStrEventId:(NSString *)eventId{
++ (NSString *)getEventNameByStrEventId:(NSString *)eventId {
     NSString *eventName = [[NSString alloc]init];
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT eventName from t_event WHERE eventId = %@;", eventId];
     while (set.next) {
@@ -84,7 +82,7 @@ static FMDatabase *_db;
 }
 
 
-+ (NSString *)getEventColorByStrEventId:(NSString *)eventId{
++ (NSString *)getEventColorByStrEventId:(NSString *)eventId {
     NSString *eventColor = [[NSString alloc]init];
     FMResultSet *set = [_db executeQueryWithFormat:@"SELECT eventColor from t_event WHERE eventId = %@;", eventId];
     while (set.next) {

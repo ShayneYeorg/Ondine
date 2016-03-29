@@ -12,6 +12,7 @@
 #import "SYNavigationController.h"
 
 @implementation SYTabBarViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self detailsOfViewDidLoad];
@@ -20,7 +21,7 @@
 /**
  *   把viewDidLoad里的加载语句整合在这个方法里
  */
--(void)detailsOfViewDidLoad{
+-(void)detailsOfViewDidLoad {
     //初始化子控制器，这里指定了程序会有几个页面
     SYCounterViewController *counterView = [[SYCounterViewController alloc] init];
     [self addChildVc:counterView navTitle:@"ondine" tabbarTitle:@"计时" image:@"tabbar_counter" selectedImage:@"tabbar_counter_selected"];
@@ -42,8 +43,7 @@
  *  @param image         图片
  *  @param selectedImage 选中的图片
  */
-- (void)addChildVc:(UIViewController *)childVc navTitle:(NSString *)navTitle tabbarTitle:(NSString *)tabbarTitle image:(NSString *)image selectedImage:(NSString *)selectedImage
-{
+- (void)addChildVc:(UIViewController *)childVc navTitle:(NSString *)navTitle tabbarTitle:(NSString *)tabbarTitle image:(NSString *)image selectedImage:(NSString *)selectedImage {
     //设置子控制器的文字
     childVc.tabBarItem.title = tabbarTitle; // 设置tabbar的文字
     childVc.navigationItem.title = navTitle; // 设置navigationBar的文字

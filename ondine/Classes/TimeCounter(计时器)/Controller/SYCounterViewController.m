@@ -18,14 +18,12 @@
 #import "SYCountingTime.h"
 #import "SYCountingTimeTool.h"
 
-#define kLabelWidth [UIScreen mainScreen].bounds.size.width
-#define kLabelHeight 30
-#define kInfoLabelY self.view.frame.size.height * 0.2
-#define kCountLabelY CGRectGetMaxY(self.infoLabel.frame)
-#define kStartBtnWidth 100
+#define kLabelHeight    30
+#define kStartBtnWidth  100
 #define kStartBtnHeight 100
 
 @interface SYCounterViewController ()
+
 /**
  *   点击按钮会在下方弹出的那个页面的蒙板的控制器
  */
@@ -45,36 +43,47 @@
  *   显示事件执行时间
  */
 @property (nonatomic, strong) UILabel *countLabel;
+
 @end
 
 @implementation SYCounterViewController
--(UILabel *)infoLabel{
+
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configDetails];
+}
+
+//由下方弹出页面和AppDelegate发出的通知，这里收到通知，就重新调用viewDidLoad方法刷新页面
+-(void)viewWillAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(viewDidLoad) name:@"reloadCounterView" object:nil];
+}
+
+#pragma mark - Getter
+
+- (UILabel *)infoLabel {
     if (_infoLabel == nil) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, kInfoLabelY, kLabelWidth, kLabelHeight)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.height * 0.2, kScreenWidth, kLabelHeight)];
         _infoLabel = label;
     }
     return _infoLabel;
 }
 
--(UILabel *)countLabel{
+- (UILabel *)countLabel {
     if (_countLabel == nil) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, kCountLabelY, kLabelWidth, kLabelHeight)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.infoLabel.frame), kScreenWidth, kLabelHeight)];
         _countLabel = label;
     }
     return _countLabel;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self detailsOfViewDidLoad];
-}
+#pragma mark - Private
 
-/**
- *   把viewDidLoad里的加载语句整合在这个方法里
- */
--(void)detailsOfViewDidLoad{
+//把viewDidLoad里的加载语句整合在这个方法里
+- (void)configDetails {
     //如果有未移除的时钟，先把它处理掉
-    if([self.timer respondsToSelector:@selector(invalidate)]){
+    if ([self.timer respondsToSelector:@selector(invalidate)]) {
         [self.timer invalidate];
     }
     
@@ -86,6 +95,7 @@
     
     //根据数据库中t_currentEvent表存储的当前事件来判断应该显示哪个按钮
     if ([SYTimeTool getCurrentTimeId] == 0) {
+        //没有正在执行的事件
         //如果有另一个按钮，把另一个按钮去掉
         for (UIButton *b in self.view.subviews) {
             [b removeFromSuperview];
@@ -94,6 +104,7 @@
         for (UILabel *label in self.view.subviews) {
             [label removeFromSuperview];
         }
+        
         //说明没有正在执行的事件，显示start样式的按钮
         UIButton *startBtn = [[UIButton alloc]init];
         startBtn.width = kStartBtnWidth;
@@ -103,11 +114,14 @@
         [startBtn setBackgroundImage:[UIImage imageNamed:@"startButton"] forState:UIControlStateNormal];
         [startBtn setBackgroundImage:[UIImage imageNamed:@"startButton_selected"] forState:UIControlStateHighlighted];
         [self.view addSubview:startBtn];
-    }else{
+        
+    } else {
+        //有正在执行的事件
         //如果有另一个按钮，把另一个按钮去掉
         for (UIButton *b in self.view.subviews) {
             [b removeFromSuperview];
         }
+        
         //说明有正在执行的任务，要显示stop按钮
         UIButton *stopBtn = [[UIButton alloc]init];
         stopBtn.width = kStartBtnWidth;
@@ -117,15 +131,14 @@
         [stopBtn setBackgroundImage:[UIImage imageNamed:@"stopButton_selected"] forState:UIControlStateHighlighted];
         [stopBtn addTarget:self action:@selector(stopCounting:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:stopBtn];
+        
         //调用文字显示方法
         [self showLabel];
     }
 }
 
-/**
- *   从数据库里取出当前事件，查询出当前事件的已执行时间，显示出来
- */
--(void)showLabel{
+//从数据库里取出当前事件，查询出当前事件的已执行时间，显示出来
+- (void)showLabel {
     //文字label
     NSString *currentEvent = [SYTimeTool getCurrentEventName];
     NSString *infoLableText = [NSString stringWithFormat:@"%@已进行了", currentEvent];
@@ -152,35 +165,22 @@
     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
-/**
- *   时钟更新方式，每秒把countLabel的内容加1
- */
--(void)updateTimer:(NSTimer *)timer{
+//时钟更新方式，每秒把countLabel的内容加1
+- (void)updateTimer:(NSTimer *)timer {
     SYCountingTime *tempTime = [SYCountingTimeTool transStringToCountingTime:self.countLabel.text];
     tempTime = [SYCountingTimeTool countingTimePlus:tempTime];
     self.countLabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)tempTime.hur, (long)tempTime.min, (long)tempTime.sec];
 }
 
-/**
- *   由下方弹出页面和AppDelegate发出的通知，这里收到通知，就重新调用viewDidLoad方法刷新页面
- */
--(void)viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(viewDidLoad) name:@"reloadCounterView" object:nil];
-}
-
-/**
- *   导航栏右侧设置按钮的触发方法
- */
-- (void)setting{
+//导航栏右侧设置按钮的触发方法
+- (void)setting {
     SYSettingViewController *settingView = [[SYSettingViewController alloc] init];
     settingView.title = @"设置";
     [self.navigationController pushViewController:settingView animated:YES];
 }
 
-/**
- *   当按钮为start状态下的点击触发方法
- */
-- (void)bottomShowView:(UIButton *)btn{
+//当按钮为start状态下的点击触发方法
+- (void)bottomShowView:(UIButton *)btn {
     //从底部弹出新页面SYBtmView
     SYBtmView *btmView = [[SYBtmView alloc]init];
     btmView.width = self.view.width;
@@ -188,10 +188,8 @@
     [self.tabBarController.view addSubview:btmView];
 }
 
-/**
- *   当按钮为stop状态下的点击触发方法
- */
--(void)stopCounting:(UIButton *)btn{
+//当按钮为stop状态下的点击触发方法
+- (void)stopCounting:(UIButton *)btn {
     //将结束数据插入数据库并将当前事件更新为0(无事件)
     NSDate *now = [NSDate date];
     NSInteger currentTimeId = [SYTimeTool getCurrentTimeId];
@@ -210,7 +208,5 @@
     //重新刷新界面
     [self viewDidLoad];
 }
-
-
 
 @end

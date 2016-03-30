@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
 
 @interface UIBarButtonItem (Extension)
 

@@ -11,7 +11,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SYDatePickerView.h"
-#import "UIView+Extension.h"
 
 @interface SYDatePickerBgView : UIView
 /**

@@ -13,7 +13,6 @@
  */
 
 #import "SYDropDownMenuBackground.h"
-#import "UIView+Extension.h"
 
 @interface SYDropDownMenuBackground()
 /**

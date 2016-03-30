@@ -7,7 +7,6 @@
 //
 
 #import "SYBtmView.h"
-#import "UIView+Extension.h"
 #import "SYBtmSubView.h"
 
 @interface SYBtmView() <SYBtmSubViewDelegate>

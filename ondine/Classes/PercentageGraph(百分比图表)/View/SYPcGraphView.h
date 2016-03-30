@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
 #import "SYPcRectGraphTool.h"
-#import "UIView+Extension.h"
 #import "SYDropDownMenuBackground.h"
 #import "SYDropDownMenuController.h"
 

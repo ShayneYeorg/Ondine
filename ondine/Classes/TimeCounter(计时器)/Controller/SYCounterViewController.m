@@ -10,7 +10,6 @@
 #import "SYNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
 #import "SYSettingViewController.h"
-#import "UIView+Extension.h"
 #import "SYBtmView.h"
 #import "SYEventTool.h"
 #import "SYTimeTool.h"

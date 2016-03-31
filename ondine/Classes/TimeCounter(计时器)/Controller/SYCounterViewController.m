@@ -27,6 +27,7 @@
  *   点击按钮会在下方弹出的那个页面的蒙板的控制器
  */
 @property (nonatomic, strong) UIViewController *bottomShowVc;
+@property (nonatomic, strong) UIView *bottomShowView;
 
 /**
  *   用来间隔更新countLabel的内容，造成countLabel有时间走动的效果
@@ -55,7 +56,7 @@
 }
 
 //由下方弹出页面和AppDelegate发出的通知，这里收到通知，就重新调用viewDidLoad方法刷新页面
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(viewDidLoad) name:@"reloadCounterView" object:nil];
 }
 

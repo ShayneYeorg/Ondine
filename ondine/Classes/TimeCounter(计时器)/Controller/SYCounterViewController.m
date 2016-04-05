@@ -83,7 +83,7 @@
 //把viewDidLoad里的加载语句整合在这个方法里
 - (void)configDetails {
     //如果有未移除的时钟，先把它处理掉
-    if ([self.timer respondsToSelector:@selector(invalidate)]) {
+    if ([self.timer isValid]) {
         [self.timer invalidate];
     }
     
